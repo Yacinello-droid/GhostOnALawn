@@ -13,14 +13,19 @@ def difficulty_chooser(num):
             return difficulty
 
 def guesser(real):
-    print("Choose the number of plot to hit: ")
-    if int(input()) == real.index('Ö') + 1:
-        print("Right!")
-        main()
+    print("Choose the number of plot to hit: (number)")
+    UserInput = input()
+    if UserInput.isdigit():
+        if UserInput == real.index('Ö') + 1:
+            print("Right!")
+            main() 
+        else:
+            print("Wrong!")
+            print("The real lawn was: ", real)
+            main()
     else:
-        print("Wrong!")
-        print("The real lawn was: ", real)
-        main()
+        print("Input a number!")
+        guesser(real)
 
 def main():
     print("Ghost on a lawn!")
