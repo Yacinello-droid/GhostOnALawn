@@ -46,6 +46,9 @@ def main():
             real = sorted(Hard, key=lambda x: random.random())
             print('n', 'n', 'n', 'n', 'n')
             guesser(real)
+        case _:
+            print("Choose a number between 1 and 3!")
+            main()
 
 main()
 
